@@ -29,9 +29,9 @@ Here is a list of packages that you will need:
 
 Here is the end result. You can also view the [PDF](https://raw.githubusercontent.com/haothitran/resume/master/resume.pdf).
 
-| Page 1 of 2 | Page 2 of 2 |
-|:---:|:---:|
-| ![Preview of Page 1 of 2](https://raw.githubusercontent.com/haothitran/resume/master/assets/screenshot-1.png)  | ![Preview of Page 2 of 2](https://raw.githubusercontent.com/haothitran/resume/master/assets/screenshot-2.png) |
+|                                                  Page 1 of 2                                                  |                                                  Page 2 of 2                                                  |
+| :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: |
+| ![Preview of Page 1 of 2](https://raw.githubusercontent.com/haothitran/resume/master/assets/screenshot-1.png) | ![Preview of Page 2 of 2](https://raw.githubusercontent.com/haothitran/resume/master/assets/screenshot-2.png) |
 
 ## Installation
 
