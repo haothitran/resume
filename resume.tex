@@ -1,0 +1,241 @@
+% ------------------------------------------------------------------------------
+%  RESUME
+% ------------------------------------------------------------------------------
+
+%  DOCUMENT SETTINGS
+% ------------------------------------------------------------------------------
+
+% set [{papersize}, {base font size}]{document type}
+\documentclass[letterpaper, 12pt]{article}
+
+% codification of document
+% allow user to input accented characters 
+\usepackage[utf8]{inputenc} % https://ctan.org/pkg/inputenc
+% allow output for fonts with accented characters
+\usepackage[T1]{fontenc} % https://ctan.org/pkg/fontenc
+
+% set page layout
+\usepackage{geometry} % https://ctan.org/pkg/geometry
+\geometry{
+  top=0.9in,
+  right=1in,
+  bottom=0.9in,
+  left=1in,
+  nohead, % remove head space
+  % showframe, % show document frame outline
+}
+
+% makes pages the height of its text
+\raggedbottom
+% left-align text, remove fully-justified text
+\raggedright
+
+% font
+\usepackage[default]{lato} % https://ctan.org/tex-archive/fonts/lato
+
+%  COLOURS
+% ------------------------------------------------------------------------------
+
+% provides colour management
+\usepackage{xcolor} % https://ctan.org/pkg/xcolor
+% \definecolor{name}{model}{colour-spec}
+\definecolor{light-grey}{rgb}{0.5,0.5,0.5}
+\definecolor{dark-grey}{rgb}{0.3,0.3,0.3}
+
+%  HEADER AND FOOTER
+% ------------------------------------------------------------------------------
+
+\usepackage{fancyhdr} % http://ctan.org/pkg/fancyhdr
+\usepackage{lastpage} % http://ctan.org/pkg/lastpage
+\pagestyle{fancy}
+
+% HEADER
+% clear header field
+\fancyhead{}
+% set header horizontal rule thickness (0=hide)
+\renewcommand{\headrulewidth}{0pt}
+
+% FOOTER
+% clear footer field
+\fancyfoot{}
+% set footer horizontal rule thickness
+\renewcommand{\footrulewidth}{0.5pt}
+% set spacing between footer rule and footer text
+\renewcommand{\footruleskip}{12pt}
+% set footer contents
+\lfoot{}
+\cfoot{\footnotesize \color{light-grey} Hao Tran — Résumé}
+\rfoot{\footnotesize \color{light-grey} \thepage\ of \pageref{LastPage}} % {current-page} of {total-pages}
+
+%  TITLES
+% ------------------------------------------------------------------------------
+
+\usepackage{titlesec} % https://ctan.org/pkg/titlesec
+% \titleformat{\command}[(shape)]{(format){(label)}{(sep)}{(before-code)}[(after-code)]
+% sep = horizontal separation between label and title body
+% section title
+\titleformat{\section}{\bfseries \uppercase}{}{0em}{}[\vspace{-6pt}]
+
+%  ELEMENTS
+% ------------------------------------------------------------------------------
+
+% table with fixed column widths
+\usepackage{tabularx} % https://ctan.org/pkg/tabularx
+
+% control lists {itemize, enumerate, description}
+\usepackage{enumitem} % https://ctan.org/pkg/enumitem
+
+%  CUSTOM
+% ------------------------------------------------------------------------------
+
+% horizontal rule
+\newcommand{\resumeSectionDivider}{{\color{dark-grey}\hrulefill}}
+
+% used for new company/school and position/cert
+\newcommand{\resumeSubSectionHeading}[4]{
+  \item
+    \begin{tabular*}{\textwidth}[t]{@{}l@{\extracolsep{\fill}}r}
+      % {Company}{Location}
+      % {Job Position}{{Start Date}---{End Date}}
+      {\color{dark-grey} #1} & {\small \fontseries{l}\selectfont \color{light-grey} #2}\\
+      \textit{#3} & \textit{{\small \fontseries{l}\selectfont \color{dark-grey} #4}}\\
+    \end{tabular*}\vspace{-4pt}
+}
+
+% used for different position within above company
+\newcommand{\resumeSubSectionNoHeading}[2]{
+  \vspace{-6pt}
+  \item
+    \begin{tabular*}{\textwidth}[t]{@{}l@{\extracolsep{\fill}}r}
+      % {Job Position}{{Start Date}---{End Date}}
+      \textit{#1} & \textit{{\small \fontseries{l}\selectfont \color{dark-grey} #2}}\\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.2in,nosep,label={--}]}
+\newcommand{\resumeItem}[1]{\item{\small \color{dark-grey} #1}}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+
+% ------------------------------------------------------------------------------
+%  DOCUMENT
+% ------------------------------------------------------------------------------
+
+\begin{document}
+
+%  NAME
+% ------------------------------------------------------------------------------
+
+\begin{center}
+  \textbf{\huge HAO TRAN}\\ 
+  \vspace{12pt}
+\end{center}
+
+%  CONTACT INFORMATION
+% ------------------------------------------------------------------------------
+
+\begin{tabular*}{\textwidth}{@{}ll@{\extracolsep{\fill}}}
+  \textbf{PHONE} & \color{dark-grey} 000-000-0000 \\
+  \textbf{EMAIL} & \color{dark-grey} hello@haothitran.com \\ 
+  \textbf{LINKEDIN} & \color{dark-grey} linkedin.com/in/haothitran \\ 
+\end{tabular*}
+
+\vspace{12pt}
+\resumeSectionDivider
+\vspace{12pt}
+
+%  PROFILE AND KEY SKILLS
+% ------------------------------------------------------------------------------
+
+% \begin{minipage}[adjust (c=center, t=top, b=bottom)]{width}
+\begin{minipage}[t]{0.64\textwidth}
+  \section{Profile}\vspace{0pt}
+  \raggedright \small \color{dark-grey} Dedicated professional with 3+ years of experience supporting operational efficiency. Demonstrated experience handling sensitive materials and client privacy, including academic, medical, and legal documents. Fostered positive relationships with key stakeholders founded on trust. Committed to collaborating with cross-functional teams to deliver on organizational goals.
+\end{minipage}% remove small blank space after first minipage
+\hspace{0.25in}
+\begin{minipage}[t]{0.3\textwidth}
+  \section{Key Skills}\vspace{0pt}
+  \resumeItemListStart
+    \resumeItem {Business administration}
+    \resumeItem {Database management}
+    \resumeItem {Regulatory compliance}
+    \resumeItem {Stakeholder management}
+    \resumeItem {Inventory management}
+    \resumeItem {Time management}
+  \resumeItemListEnd
+\end{minipage}
+
+\vspace{14pt}
+\resumeSectionDivider
+\vspace{-6pt}
+
+%  WORK EXPERIENCE
+% ------------------------------------------------------------------------------
+
+\section{Work Experience}
+\begin{itemize}[leftmargin=0in, label={}]
+  \resumeSubSectionHeading
+    {Trinity Underwriting}{Toronto, ON}
+    {Underwriting Associate}{October 2021---Present}
+    \resumeItemListStart
+      \resumeItem{Responsibility.}
+      \resumeItem{Responsibility.}
+      \resumeItem{Responsibility.}
+    \resumeItemListEnd
+  \resumeSubSectionNoHeading
+    {Data Entry Clerk}{February 2021---September 2021}
+    \resumeItemListStart
+      \resumeItem{Responsibility.}
+      \resumeItem{Responsibility.}
+      \resumeItem{Responsibility.}
+    \resumeItemListEnd
+  \resumeSubSectionHeading
+    {World Education Services}{Toronto, ON}
+    {Academic Records Specialist}{March 2020---December 2020}
+    \resumeItemListStart
+      \resumeItem{Supported seamless business operations, ensuring the timely and accurate processing and distribution of incoming application documents from postal and courier mail.}
+      \resumeItem{Evaluated authenticity of academic documents.}
+      \resumeItem{Adhered to strict document handling policies and procedures to preserve applicant privacy.}
+      \resumeItem{Assisted institutions, including academic institutions, licensing boards, immigration authorities, and employers in validating international education credentials.}
+    \resumeItemListEnd
+  \resumeSubSectionHeading
+    {Nella Cutlery}{North York, ON}
+    {Data Entry Clerk}{November 2018---February 2020}
+    \resumeItemListStart
+      \resumeItem{Coordinated between internal and external stakeholders to ensure seamless customer experience and expeditious order processing, including salespersons, inventory managers, warehouse, drivers, and clients.}
+      \resumeItem{Assessed data from sales source documents to verify customer billing and shipping information, product codes and prices, processed payments, and administrative fees.}
+      \resumeItem{Transferred data from source paper documents to online BlueLink database system.}
+      \resumeItem{Organized source paper documents for archiving and storage.}
+      \resumeItem{Served as the first and last point of contact throughout the entire ordering cycle.}
+      \resumeItem{Processed millions of dollars in orders for food industry leading clients, including Loblaws, Longo’s, Metro Inc., Eataly Toronto, and other major grocers and restaurants while maintaining comprehensive and accurate order records.}
+    \resumeItemListEnd
+  \resumeSubSectionHeading
+    {Iron Mountain}{Concord, ON}
+    {Document Imaging Specialist}{September 2017---March 2018}
+    \resumeItemListStart
+      \resumeItem{Presided over confidential and highly regulated medical and legal documents.}
+      \resumeItem{Prepared documents for scanning and electronic indexing through Kofax.}
+      \resumeItem{Validated and verified thousands of documents involving analyzing information and assigning correct keywords and identifiers to documents.}
+      \resumeItem{Demonstrated a high level of productivity, completing time sensitive projects ahead of established deadlines.}
+      \resumeItem{Developed strong organizational skills in information classification and digital archiving.}
+      \resumeItem{Recognized as the fastest processor at Iron Mountain for a client project, having indexed and archived 2K+ documents per day.}
+    \resumeItemListEnd
+\end{itemize}
+
+\vspace{-8pt}
+\resumeSectionDivider
+\vspace{-6pt}
+
+%  EDUCATION
+% ------------------------------------------------------------------------------
+
+\section{Education}
+\begin{itemize}[leftmargin=0in, label={}]
+  \resumeSubSectionHeading
+    {Ryerson University}{Toronto, ON}
+    {Bachelor of Arts in Sociology}{Graduated in 2017}
+  \resumeSubSectionHeading
+    {Runnymede Collegiate Institute}{Toronto, ON}
+    {MASTERS of Math, Science, and Technology Program}{Graduated in 2012}
+\end{itemize}
+
+\end{document}
